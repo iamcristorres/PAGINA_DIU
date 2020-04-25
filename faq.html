@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>FAQ</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <script type="text/javascript" src="funciones.js">
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPDF</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Principal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="descargas.html">Descargas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manual.html">Manual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="scripts.html">Scripts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+
+            </div>
+        </nav>
+
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-md-12">
+                  <h1 class="subtitle">FAQ</h1>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-12">
+                <p class="texto">1. <a href="#"> ¿Cuál es exactamente el tipo de licencia de FPDF? ¿Existen restricciones de uso?</a></p>
+                <p class="texto">2. <a href="#"> Encuentro el siguiente error cuando intento generar un PDF: Some data has already been output, can't send PDF file</a></p>
+                <p class="texto">3. <a href="#"> Caracteres acentuados son reemplazados por algunos caracteres extraños como Ã©.</a></p>
+                <p class="texto">4. <a href="#"> Intento incluir el símbolo del euro, pero no funciona.</a></p>
+                <p class="texto">5. <a href="#"> He definido los métodos Header y Footer en mi clase PDF, pero no se muestra nada.</a></p>
+                <p class="texto">6. <a href="#"> No consigo que los saltos de línea funcionen. Pongo \n en la cadena para MultiCell, pero no funciona.</a></p>
+                <p class="texto">7. <a href="#"> Uso jQuery para generar el archivo PDF pero éste no se muestra.</a></p>
+                <p class="texto">8. <a href="#"> Dibujo un marco con dimensiones muy precisas pero, cuando lo imprimo, noto algunas diferencias.</a></p>
+                <p class="texto">9. <a href="#"> Me gustaría usar toda la superficie de la página, pero cuando imprimo siempre aparecen márgenes. ¿Cómo puedo deshacerme de ellos?</a></p>
+                <p class="texto">10. <a href="#"> ¿Cómo puedo poner un fondo en mi PDF?</a></p>
+                <p class="texto">11. <a href="#"> ¿Cómo puedo establecer una cabecera o pie de página en la primera página?</a></p>
+                <p class="texto">12. <a href="#"> Me gustaría utilizar extensiones previstas por diferentes scripts. ¿Cómo puedo combinarlos?</a></p>
+              </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-md-12 mt-2">
+              <p class="texto">1. ¿Cuál es exactamente el tipo de licencia de FPDF? ¿Existen restricciones de uso?</p>
+              <hr>
+              <p>FPDF es liberado bajo una licencia permisiva: no hay restricción de uso. Usted puede integrarlo libremente en su aplicación (comercial o no), con o sin modificaciones.</p>
+            </div>
+
+            <div class="col-md-12 mt-2">
+              <p class="texto">2. Encuentro el siguiente error cuando intento generar un PDF: Some data has already been output, can't send PDF file</p>
+              <hr>
+              <p>Usted no debe enviar nada al navegador, excepto el propio PDF: ningún HTML, espacio o retorno de carro. Un caso común es tener una línea o espacio en blanco extra al final del script incluido.
+                Si usted no puede averiguar de donde proviene el problema, este otro mensaje que aparece justo abajo puede ayudarlo:
+                
+                Warning: Cannot modify header information - headers already sent by (output started at script.php:X)
+                
+                Esto significa que script.php envía algo en la línea X. Vaya a esta línea y arréglelo. En caso de que el mensaje no aparece, en primer lugar compruebe que usted no haya desactivado las advertencias, a continuación, agregue esto al comienzo de su script:</p>
+
+                <div class="contenido-code border">
+                  ob_end_clean();
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-2">
+              <p class="texto">3. Caracteres acentuados son reemplazados por algunos caracteres extraños como Ã©.</p>
+              <hr>
+              <p>No utilice codificación UTF-8. La codificación estándar de fuentes en FPDF es ISO-8859-1 o windows-1252. Es posible realizar una conversión a la norma ISO-8859-1 con utf8_decode():</p>
+              <div class="contenido-code border">
+                $str = utf8_decode($str);
+              </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+
+
+
+        <footer class = "footer">
+            <div class = "container">
+              <div class = "row">
+                <div class = "col-sm-3">
+                  <div class = "footer-widget">
+                    <h3> Contacto </h3>
+                    <div class = "footer-widget-content">
+                      <a href="mailto:sales@example.com" class="contact-link"> info@fpdf.com </a>
+                      <a href="mailto:support@example.com" class="contact-link red"> support@fpdf.com </a>
+                      <div class = "footer-social">
+                      <ul>
+                        <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-twitter"></i> </i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-github"></i> </i> </a> </li>
+                        <li> <a href="#"> <i class = "fa fa-rss"> </i> </a> </li>
+                      </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "col-sm-3">
+                <div class = "footer-widget">
+                  <h3> Links de Interes </h3>
+                  <div class = "footer-widget-content">
+                    <ul>
+                        <li> <a href="#"> Examples</a> </li>
+                        <li> <a href="#"> Foro </a> </li>
+                        <li> <a href="#"> Scripts </a> </li>
+                        <li> <a href="#"> FAQS </li>
+                      </ul>
+                  </div>
+                  </div> </div>
+              </div>
+            </div>
+        </footer>
+    </body>
+</html>
