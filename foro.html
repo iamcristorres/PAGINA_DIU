@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>Foro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <script type="text/javascript" src="funciones.js">
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPDF</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Principal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="descargas.html">Descargas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manual.html">Manual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="scripts.html">Scripts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+
+            </div>
+        </nav>
+
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-md-12">
+                  <h1 class="subtitle">Foro</h1>
+                </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <p>Listado de preguntas en el foro</a></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="container mt-5 mb-5">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table table-hover">
+                <thead style="background-color: #560082;color:#fff">
+                  <tr>
+                    <th scope="col"><center>Topics</center></th>
+                    <th scope="col"><center>Autor</center></th>
+                    <th scope="col"><center>Replicas</center></th>
+                    <th scope="col"><center>Ultima Actualización</center></th>
+                  </tr>
+                </thead>
+                <tbody id="body_topic">
+
+                  <tr>
+                    <th scope="row"><a href ="#">Multiple output </a></th>
+                    <td><center>Joep</center></td>
+                    <td><center>1</center></td>
+                    <td><center>05-14-20 12:23</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Is the project still maintained? </a></th>
+                    <td><center>	Ayush </center></td>
+                    <td><center>4</center></td>
+                    <td><center>05-14-20 13:34</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#"> how to align a table so one is a superposition of three others?</a></th>
+                    <td><center>LeDuc</center></td>
+                    <td><center>0</center></td>
+                    <td><center>05-14-20 00:21</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#"> Table from MySQL data - Multicell? </a></th>
+                    <td><center>retroisbest</center></td>
+                    <td><center>4</center></td>
+                    <td><center>05-13-20 22:57</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#"> Faltan uno o más bloques XREF </a></th>
+                    <td><center>Sergio</center></td>
+                    <td><center>0</center></td>
+                    <td><center>05-11-20 17:03 </center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Loading image into PDF </a></th>
+                    <td><center>Daniel </center></td>
+                    <td><center>1</center></td>
+                    <td><center>05-10-20 05:24</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">FAQ #1 Addendum</a></th>
+                    <td><center>Mark Manning</center></td>
+                    <td><center>10</center></td>
+                    <td><center>05-14-20 00:46</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Urgent HELP! Rotation of image within Code39 </a></th>
+                    <td><center>Michael Kennedy </center></td>
+                    <td><center>1</center></td>
+                    <td><center>05-06-20 09:18</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Skip a few labels and start printing on 2nd row </a></th>
+                    <td><center>Patrick Hait</center></td>
+                    <td><center>0</center></td>
+                    <td><center>05-05-20 03:25</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Top margin issue in second page </a></th>
+                    <td><center>Xavier </center></td>
+                    <td><center>1</center></td>
+                    <td><center>05-05-20 10:40</center></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><a href ="#">Rotated Table Column Headers </a></th>
+                    <td><center>zanki</center></td>
+                    <td><center>1</center></td>
+                    <td><center>05-04-20 17:26</center></td>
+                  </tr>
+                </tbody>
+              </table>
+              <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Insertar Nuevo Topic</button></center>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Insertar Nuevo Topic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Titulo Topic</label>
+                  <input type="text" class="form-control" id="title" placeholder="Titulo Topic">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nombre">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onClick="guardarTopic()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class = "footer">
+            <div class = "container">
+              <div class = "row">
+                <div class = "col-sm-3">
+                  <div class = "footer-widget">
+                    <h3> Contacto </h3>
+                    <div class = "footer-widget-content">
+                      <a href="mailto:sales@example.com" class="contact-link"> info@fpdf.com </a>
+                      <a href="mailto:support@example.com" class="contact-link red"> support@fpdf.com </a>
+                      <div class = "footer-social">
+                      <ul>
+                        <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-twitter"></i> </i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-github"></i> </i> </a> </li>
+                        <li> <a href="#"> <i class = "fa fa-rss"> </i> </a> </li>
+                      </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "col-sm-3">
+                <div class = "footer-widget">
+                  <h3> Links de Interes </h3>
+                  <div class = "footer-widget-content">
+                    <ul>
+                        <li> <a href="#"> Examples</a> </li>
+                        <li> <a href="#"> Foro </a> </li>
+                        <li> <a href="#"> Scripts </a> </li>
+                        <li> <a href="#"> FAQS </li>
+                      </ul>
+                  </div>
+                  </div> </div>
+              </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>

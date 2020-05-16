@@ -58,29 +58,29 @@
 
             <div class="row mt-5">
               <div class="col-md-12">
-                <p class="texto">1. <a href="#"> ¿Cuál es exactamente el tipo de licencia de FPDF? ¿Existen restricciones de uso?</a></p>
-                <p class="texto">2. <a href="#"> Encuentro el siguiente error cuando intento generar un PDF: Some data has already been output, can't send PDF file</a></p>
-                <p class="texto">3. <a href="#"> Caracteres acentuados son reemplazados por algunos caracteres extraños como Ã©.</a></p>
-                <p class="texto">4. <a href="#"> Intento incluir el símbolo del euro, pero no funciona.</a></p>
-                <p class="texto">5. <a href="#"> He definido los métodos Header y Footer en mi clase PDF, pero no se muestra nada.</a></p>
-                <p class="texto">6. <a href="#"> No consigo que los saltos de línea funcionen. Pongo \n en la cadena para MultiCell, pero no funciona.</a></p>
-                <p class="texto">7. <a href="#"> Uso jQuery para generar el archivo PDF pero éste no se muestra.</a></p>
-                <p class="texto">8. <a href="#"> Dibujo un marco con dimensiones muy precisas pero, cuando lo imprimo, noto algunas diferencias.</a></p>
-                <p class="texto">9. <a href="#"> Me gustaría usar toda la superficie de la página, pero cuando imprimo siempre aparecen márgenes. ¿Cómo puedo deshacerme de ellos?</a></p>
-                <p class="texto">10. <a href="#"> ¿Cómo puedo poner un fondo en mi PDF?</a></p>
-                <p class="texto">11. <a href="#"> ¿Cómo puedo establecer una cabecera o pie de página en la primera página?</a></p>
-                <p class="texto">12. <a href="#"> Me gustaría utilizar extensiones previstas por diferentes scripts. ¿Cómo puedo combinarlos?</a></p>
+                <p class="texto">1. <a href="#i-1"> ¿Cuál es exactamente el tipo de licencia de FPDF? ¿Existen restricciones de uso?</a></p>
+                <p class="texto">2. <a href="#i-2"> Encuentro el siguiente error cuando intento generar un PDF: Some data has already been output, can't send PDF file</a></p>
+                <p class="texto">3. <a href="#i-3"> Caracteres acentuados son reemplazados por algunos caracteres extraños como Ã©.</a></p>
+                <p class="texto">4. <a href="#i-4"> Intento incluir el símbolo del euro, pero no funciona.</a></p>
+                <p class="texto">5. <a href="#i-5"> He definido los métodos Header y Footer en mi clase PDF, pero no se muestra nada.</a></p>
+                <p class="texto">6. <a href="#i-6"> No consigo que los saltos de línea funcionen. Pongo \n en la cadena para MultiCell, pero no funciona.</a></p>
+                <p class="texto">7. <a href="#i-7"> Uso jQuery para generar el archivo PDF pero éste no se muestra.</a></p>
+                <p class="texto">8. <a href="#i-8"> Dibujo un marco con dimensiones muy precisas pero, cuando lo imprimo, noto algunas diferencias.</a></p>
+                <p class="texto">9. <a href="#i-9"> Me gustaría usar toda la superficie de la página, pero cuando imprimo siempre aparecen márgenes. ¿Cómo puedo deshacerme de ellos?</a></p>
+                <p class="texto">10. <a href="#i-10"> ¿Cómo puedo poner un fondo en mi PDF?</a></p>
+                <p class="texto">11. <a href="#i-11"> ¿Cómo puedo establecer una cabecera o pie de página en la primera página?</a></p>
+                <p class="texto">12. <a href="#i-12"> Me gustaría utilizar extensiones previstas por diferentes scripts. ¿Cómo puedo combinarlos?</a></p>
               </div>
           </div>
 
           <div class="row mt-5">
-            <div class="col-md-12 mt-2">
+            <div class="col-md-12 mt-2" id="i-1">
               <p class="texto">1. ¿Cuál es exactamente el tipo de licencia de FPDF? ¿Existen restricciones de uso?</p>
               <hr>
               <p>FPDF es liberado bajo una licencia permisiva: no hay restricción de uso. Usted puede integrarlo libremente en su aplicación (comercial o no), con o sin modificaciones.</p>
             </div>
 
-            <div class="col-md-12 mt-2">
+            <div class="col-md-12 mt-2" id="i-2">
               <p class="texto">2. Encuentro el siguiente error cuando intento generar un PDF: Some data has already been output, can't send PDF file</p>
               <hr>
               <p>Usted no debe enviar nada al navegador, excepto el propio PDF: ningún HTML, espacio o retorno de carro. Un caso común es tener una línea o espacio en blanco extra al final del script incluido.
@@ -95,15 +95,113 @@
                 </div>
             </div>
 
-            <div class="col-md-12 mt-2">
+            <div class="col-md-12 mt-2" id="i-3">
               <p class="texto">3. Caracteres acentuados son reemplazados por algunos caracteres extraños como Ã©.</p>
               <hr>
               <p>No utilice codificación UTF-8. La codificación estándar de fuentes en FPDF es ISO-8859-1 o windows-1252. Es posible realizar una conversión a la norma ISO-8859-1 con utf8_decode():</p>
               <div class="contenido-code border">
                 $str = utf8_decode($str);
               </div>
-
             </div>
+
+            <div class="col-md-12 mt-2" id="i-4">
+              <p class="texto">4. Intento incluir el símbolo del euro, pero no funciona.</p>
+              <hr>
+              <p>Tienes que utilizar la palabra clave global para acceder a las variables globales, por ejemplo:</p>
+              <div class="contenido-code border">
+                function Header()
+                {
+                  global $title;
+
+                  $this->SetFont('Arial', 'B', 15);
+                  $this->Cell(0, 10, $title, 1, 1, 'C');
+                }
+
+                $title = 'Mi Título';
+              </div>
+            </div>
+
+
+            <div class="col-md-12 mt-2" id="i-5">
+              <p class="texto">5. Intento mostrar una variable en el método Header pero no se imprime nada.</p>
+              <hr>
+              <p>Tienes que utilizar la palabra clave global para acceder a las variables globales, por ejemplo:</p>
+              <div class="contenido-code border">
+                function Header()
+                {
+                  global $title;
+
+                  $this->SetFont('Arial', 'B', 15);
+                  $this->Cell(0, 10, $title, 1, 1, 'C');
+                }
+
+                $title = 'Mi Título';
+              </div>
+            </div>
+
+
+            <div class="col-md-12 mt-2" id="i-6">
+              <p class="texto">6.  He definido los métodos Header y Footer en mi clase PDF, pero no se muestra nada.</p>
+              <hr>
+              <p>Tiene que crear un objeto de la clase PDF, no de la FPDF:</p>
+              <div class="contenido-code border">
+                $pdf = new PDF();
+              </div>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-7">
+              <p class="texto">7.  No consigo que los saltos de línea funcionen. Pongo \n en la cadena para MultiCell, pero no funciona.</p>
+              <hr>
+              <p>Debe usted utilizar comillas dobles ("), no simples ('), para la cadena.</p>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-8">
+              <p class="texto">8.  Uso jQuery para generar el archivo PDF pero éste no se muestra.</p>
+              <hr>
+              <p>No uses a AJAX request para obtener el PDF.</p>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-9">
+              <p class="texto">9.  Dibujo un marco con dimensiones muy precisas pero, cuando lo imprimo, noto algunas diferencias.</p>
+              <hr>
+              <p>Respecto a las dimensiones, seleccione "Ninguno" para el ajuste de escala de página en lugar de "Reducir al área de impresión" en el cuadro de diálogo Imprimir.</p>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-10">
+              <p class="texto">10. Me gustaría usar toda la superficie de la página, pero cuando imprimo siempre aparecen márgenes. ¿Cómo puedo deshacerme de ellos?</p>
+              <hr>
+              <p>Todas las impresoras tienen márgenes físicos (dependiendo del modelo). Por tanto, es imposible quitarlos e imprimir en la totalidad del papel.</p>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-11">
+              <p class="texto">11.  ¿Cómo puedo poner un fondo en mi PDF?</p>
+              <hr>
+              <p>Para una imagen, invoque Image() en el método Header(), antes que cualquier otra salida. Para configurar un color de fondo, use Rect().</p>
+            </div>
+
+            <div class="col-md-12 mt-2" id="i-12">
+              <p class="texto">12.  ¿Cómo puedo establecer una cabecera o pie de página en la primera página?</p>
+              <hr>
+              <p>Simplemente verifique el número de la página:
+              </p>
+              <div class="contenido-code border">
+                function Header()
+                {
+                  if($this->PageNo()==1)
+                {
+                  //Primera Página
+                  ...
+                }
+                else
+                {
+                  //Otras Páginas
+                  ...
+                }
+                }         
+              </div>
+            </div>
+
+            
 
         </div>
 
