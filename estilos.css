@@ -45,10 +45,24 @@
   color: #000;
 }
 
+.btn-outline-info {
+  color: #17a2b8;
+  border-color: #17a2b8;
+  border-width: 2;
+  font-weight: bold;
+}
 
+.textnegrita{
+  font-weight: bold;
+}
 
-
-
+.divconfirmation{
+  background-color:#C2C2C2;
+  border: 2px solid #560082;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+}
 
 
 
@@ -124,4 +138,12 @@
   }
   footer .images-gellary ul li:nth-child(3n) {
     margin: 0 0 1%;
+  }
+
+  .input-error{
+    border:2px solid red !important;
+  }
+
+  .div-oculto{
+    display:none;
   }

@@ -33,3 +33,123 @@ function guardarTopic(){
     $("#title").val("");
     $("#name").val("");
 }
+
+function validarFormulario(){
+    var nombres=$("#nombres");
+    var nombres_e=$("#nombres_e");
+    var apellidos=$("#apellidos");
+    var apellidos_e=$("#apellidos_e");
+    var correo1=$("#correo1");
+    var correo1_e=$("#correo1_e");
+    var correo2=$("#correo2");
+    var correo2_e=$("#correo2_e");
+    var password1=$("#password1");
+    var password1_e=$("#password1_e");
+    var password2=$("#password2");
+    var password2_e=$("#password2_e");
+    var direccion=$("#direccion");
+    var direccion_e=$("#direccion_e");
+    var ocupacion=$("#ocupacion");
+    var ocupacion_e=$("#ocupacion_e");
+    var genero_e=$("#genero_e");
+    var termCond_e=$("#termCond_e");
+    $val=true;
+    if(nombres.val()==""){
+        nombres.addClass( "input-error" );
+        nombres_e.empty();
+        nombres_e.append( "Hace Falta los nombres" );
+        nombres_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+    if(apellidos.val()==""){
+        apellidos.addClass( "input-error" );
+        apellidos_e.empty();
+        apellidos_e.append( "Hace Falta los apellidos" );
+        apellidos_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(correo1.val()==""){
+        correo1.addClass( "input-error" );
+        correo1_e.empty();
+        correo1_e.append( "Hace Falta el correo" );
+        correo1_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(correo2.val()==""){
+        correo2.addClass( "input-error" );
+        correo2_e.empty();
+        correo2_e.append( "Hace Falta el correo" );
+        correo2_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(password1.val()==""){
+        password1.addClass( "input-error" );
+        password1_e.empty();
+        password1_e.append( "Hace Falta la contraseña" );
+        password1_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(password2.val()==""){
+        password2.addClass( "input-error" );
+        password2_e.empty();
+        password2_e.append( "Hace Falta la contraseña" );
+        password2_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(direccion.val()==""){
+        direccion.addClass( "input-error" );
+        direccion_e.empty();
+        direccion_e.append( "Hace Falta la direccion" );
+        direccion_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(ocupacion.val()==""){
+        ocupacion.addClass( "input-error" );
+        ocupacion_e.empty();
+        ocupacion_e.append( "Hace Falta la ocupacion" );
+        ocupacion_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(password1.val()!=password2.val()){
+        password2.addClass( "input-error" );
+        password2_e.empty();
+        password2_e.append( "Las contraseñas no coinciden" );
+        password2_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if(correo1.val()!=correo2.val()){
+        correo2.addClass( "input-error" );
+        correo2_e.empty();
+        correo2_e.append( "Los correos no coinciden" );
+        correo2_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if($("[name='inlineRadioOptions']:checked").val()==undefined){
+        genero_e.empty();
+        genero_e.append( "Debe Seleccionar un genero" );
+        genero_e.removeClass( "div-oculto" );
+        $val=false;
+    }
+
+    if($("#termCondID").is(':checked')){
+        termCond_e.empty();
+        termCond_e.append( "Debe Aceptar terminos y condiciones" );
+        termCond_e.removeClass( "div-oculto" );
+        $val=false;
+    }else{
+        
+    }
+
+    if($val){
+        $( "#formulario" ).submit();
+    }
+}
