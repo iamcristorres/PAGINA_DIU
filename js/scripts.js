@@ -153,3 +153,22 @@ function validarFormulario(){
         $( "#formulario" ).submit();
     }
 }
+
+function datos(){
+    var parametros=location.search.substr(1).split("&");
+    campos1 = parametros[0].split("=");
+    campos2 = parametros[1].split("=");
+    campos3 = parametros[2].split("=");
+    campos4 = parametros[3].split("=");
+    campos5 = parametros[4].split("=");
+
+    var correo=campos3[1].replace('%40','@');
+    encodeURIComponent('@');
+    document.getElementById("cargaDatos").innerHTML+=`
+    <p><span class="textnegrita">Nombres: </span>`+campos1[1]+`</p>
+    <p><span class="textnegrita">Apellidos: </span>`+campos2[1]+`</p>
+    <p><span class="textnegrita">Correo Electronico: </span>`+correo+`</p>
+    <p><span class="textnegrita">Dirección Residencia: </span>`+campos4[1]+`</p>
+    <p><span class="textnegrita">Ocupacion: </span>`+campos5[1]+`</p>
+    `;
+}
